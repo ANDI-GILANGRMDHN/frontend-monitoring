@@ -7,7 +7,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://103.193.178.222:3001/api/data");
+        const res = await axios.get("https://cors-anywhere.herokuapp.com/http://103.193.178.222:3001/api/data");
         // Ambil data terakhir untuk setiap alat
         const grouped = {};
         res.data.forEach((item) => {

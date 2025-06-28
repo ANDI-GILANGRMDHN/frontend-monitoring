@@ -14,7 +14,7 @@ const Search = () => {
       if (tanggalAwal) params.append("tanggal_awal", tanggalAwal);
       if (tanggalAkhir) params.append("tanggal_akhir", tanggalAkhir);
 
-      const res = await axios.get(`http://103.193.178.222:3001/api/search?${params.toString()}`);
+      const res = await axios.get(`http://cors-anywhere.herokuapp.com/http://103.193.178.222:3001/api/search?${params.toString()}`);
       setHasil(res.data);
     } catch (err) {
       console.error("Gagal fetch data pencarian:", err);

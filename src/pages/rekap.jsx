@@ -11,7 +11,7 @@ const Rekap = () => {
   // Ambil data rekap utama
   const fetchRekap = async () => {
     try {
-      const res = await axios.get(`http://103.193.178.222:3001/api/rekap/${tab}`);
+      const res = await axios.get(`http://cors-anywhere.herokuapp.com/http://103.193.178.222:3001/api/rekap/${tab}`);
       setData(res.data);
     } catch (err) {
       console.error("Gagal ambil data rekap:", err);
@@ -21,7 +21,7 @@ const Rekap = () => {
   // Ambil data alat paling boros berdasarkan tab
   const fetchAlatBoros = async () => {
     try {
-      const res = await axios.get(`http://103.193.178.222:3001/api/terboros/${tab}`);
+      const res = await axios.get(`http://cors-anywhere.herokuapp.com/http://103.193.178.222:3001/api/terboros/${tab}`);
       setAlatBoros(res.data);
     } catch (err) {
       console.error("Gagal ambil data alat boros:", err);
